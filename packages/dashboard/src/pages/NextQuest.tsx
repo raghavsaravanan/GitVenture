@@ -242,7 +242,7 @@ export default function NextQuest() {
         api<UserProfile>("/users/me"),
         api<{ recommendations: QuestRecommendation[] }>("/quests/recommend", {
           method: "POST",
-          body: JSON.stringify({}),
+          body: JSON.stringify({ repoFullName: "tejaspalukuri/GitPathDemo" }),
         }),
         api<{ rolls: Array<RiskRollOffer & { issueNodeId: string }> }>("/quests/rolls"),
       ]);

@@ -8,6 +8,11 @@ export const pool = new Pool({
   ssl: process.env.DATABASE_URL?.includes("localhost") ? false : { rejectUnauthorized: false },
 });
 
+// Prevent idle client disconnects (common on flaky networks) from crashing the process.
+pool.on("error", (error) => {
+  console.error("Postgres pool idle client error:", error.message);
+});
+
 export const query = <T extends pg.QueryResultRow = pg.QueryResultRow>(text: string, params: unknown[] = []) =>
   pool.query<T>(text, params);
 

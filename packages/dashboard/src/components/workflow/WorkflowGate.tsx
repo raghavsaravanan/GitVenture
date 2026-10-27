@@ -34,6 +34,9 @@ export default function WorkflowGate({ children, layer }: Props) {
   }, []);
 
   if (error) {
+    if (error === "Player not found") {
+      return <Navigate to="/" replace />;
+    }
     return (
       <div className="flex min-h-[40vh] items-center justify-center bg-void px-5">
         <p className="font-body text-sm text-red-400">{error}</p>
