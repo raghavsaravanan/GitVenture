@@ -6,7 +6,7 @@
 
 GitVenture turns live GitHub issues into RPG-style quests, with AI-rated difficulty, XP that has to be earned, a skill tree, and a personalized next-quest curriculum.
 
-**Built at [HackRice](https://hackrice.com) 2026** at Rice University, Houston, TX
+**Built at [HackRice](https://hackrice.com) 2026** at Rice University
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React_18-20232A?logo=react&logoColor=61DAFB)
